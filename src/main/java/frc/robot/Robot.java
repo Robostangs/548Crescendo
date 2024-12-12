@@ -245,16 +245,24 @@ public class Robot extends TimedRobotstangs {
 		if (Robot.isReal() && Constants.Vision.UseLimelight) {
 			// front camera (intake cam) - auto tab
 			// autoTab.add(new HttpCamera(Constants.Vision.LimelightPython.llPython,
-			// 		Constants.Vision.LimelightPython.llPythonIP))
-			// 		.withSize(9, 7)
-			// 		.withPosition(6, 0)
-			// 		.withWidget(BuiltInWidgets.kCameraStream)
-			// 		.withProperties(Map.of("Show Crosshair", false, "Show Controls", false));
+			// Constants.Vision.LimelightPython.llPythonIP))
+			// .withSize(9, 7)
+			// .withPosition(6, 0)
+			// .withWidget(BuiltInWidgets.kCameraStream)
+			// .withProperties(Map.of("Show Crosshair", false, "Show Controls", false));
 
 			// front camera (intake cam) - teleop tab
+			// teleopTab
+			// .add(new HttpCamera(Constants.Vision.LimelightPython.llPython,
+			// Constants.Vision.LimelightPython.llPythonIP))
+			// .withSize(9, 7)
+			// .withPosition(6, 0)
+			// .withWidget(BuiltInWidgets.kCameraStream)
+			// .withProperties(Map.of("Show Crosshair", false, "Show Controls", false));
+
 			teleopTab
-					.add(new HttpCamera(Constants.Vision.LimelightPython.llPython,
-							Constants.Vision.LimelightPython.llPythonIP))
+					.add(new HttpCamera(Constants.Vision.LimelightPlay.llPlay,
+							Constants.Vision.LimelightPlay.llPlayIP))
 					.withSize(9, 7)
 					.withPosition(6, 0)
 					.withWidget(BuiltInWidgets.kCameraStream)
@@ -269,28 +277,28 @@ public class Robot extends TimedRobotstangs {
 
 			// check if cameras are all connected
 			// disabledTab
-			// 		.add(new HttpCamera(Constants.Vision.LimelightFront.llAprilTag,
-			// 				Constants.Vision.LimelightFront.llAprilTagIP))
-			// 		.withSize(2, 2)
-			// 		.withPosition(3, 0)
-			// 		.withWidget(BuiltInWidgets.kCameraStream)
-			// 		.withProperties(Map.of("Show Crosshair", false, "Show Controls", false));
+			// .add(new HttpCamera(Constants.Vision.LimelightFront.llAprilTag,
+			// Constants.Vision.LimelightFront.llAprilTagIP))
+			// .withSize(2, 2)
+			// .withPosition(3, 0)
+			// .withWidget(BuiltInWidgets.kCameraStream)
+			// .withProperties(Map.of("Show Crosshair", false, "Show Controls", false));
 
 			// disabledTab
-			// 		.add(new HttpCamera(Constants.Vision.LimelightRear.llAprilTagRear,
-			// 				Constants.Vision.LimelightRear.llAprilTagRearIP))
-			// 		.withSize(2, 2)
-			// 		.withPosition(5, 0)
-			// 		.withWidget(BuiltInWidgets.kCameraStream)
-			// 		.withProperties(Map.of("Show Crosshair", false, "Show Controls", false));
+			// .add(new HttpCamera(Constants.Vision.LimelightRear.llAprilTagRear,
+			// Constants.Vision.LimelightRear.llAprilTagRearIP))
+			// .withSize(2, 2)
+			// .withPosition(5, 0)
+			// .withWidget(BuiltInWidgets.kCameraStream)
+			// .withProperties(Map.of("Show Crosshair", false, "Show Controls", false));
 
 			// disabledTab
-			// 		.add(new HttpCamera(Constants.Vision.LimelightPython.llPython,
-			// 				Constants.Vision.LimelightPython.llPythonIP))
-			// 		.withSize(2, 2)
-			// 		.withPosition(7, 0)
-			// 		.withWidget(BuiltInWidgets.kCameraStream)
-			// 		.withProperties(Map.of("Show Crosshair", false, "Show Controls", false));
+			// .add(new HttpCamera(Constants.Vision.LimelightPython.llPython,
+			// Constants.Vision.LimelightPython.llPythonIP))
+			// .withSize(2, 2)
+			// .withPosition(7, 0)
+			// .withWidget(BuiltInWidgets.kCameraStream)
+			// .withProperties(Map.of("Show Crosshair", false, "Show Controls", false));
 		}
 
 		pathDelayEntry = NetworkTableInstance.getDefault()
@@ -660,25 +668,25 @@ public class Robot extends TimedRobotstangs {
 			if (Robot.isReal() && Constants.Vision.UseLimelight) {
 				// check if cameras are working
 				// testTab.add(new HttpCamera(Constants.Vision.LimelightFront.llAprilTag,
-				// 		Constants.Vision.LimelightFront.llAprilTagIP))
-				// 		.withSize(3, 2)
-				// 		.withPosition(1, 3)
-				// 		.withWidget(BuiltInWidgets.kCameraStream)
-				// 		.withProperties(Map.of("Show Crosshair", false, "Show Controls", false));
+				// Constants.Vision.LimelightFront.llAprilTagIP))
+				// .withSize(3, 2)
+				// .withPosition(1, 3)
+				// .withWidget(BuiltInWidgets.kCameraStream)
+				// .withProperties(Map.of("Show Crosshair", false, "Show Controls", false));
 
 				// testTab.add(new HttpCamera(Constants.Vision.LimelightRear.llAprilTagRear,
-				// 		Constants.Vision.LimelightRear.llAprilTagRearIP))
-				// 		.withSize(3, 2)
-				// 		.withPosition(4, 3)
-				// 		.withWidget(BuiltInWidgets.kCameraStream)
-				// 		.withProperties(Map.of("Show Crosshair", false, "Show Controls", false));
+				// Constants.Vision.LimelightRear.llAprilTagRearIP))
+				// .withSize(3, 2)
+				// .withPosition(4, 3)
+				// .withWidget(BuiltInWidgets.kCameraStream)
+				// .withProperties(Map.of("Show Crosshair", false, "Show Controls", false));
 
 				// testTab.add(new HttpCamera(Constants.Vision.LimelightPython.llPython,
-				// 		Constants.Vision.LimelightPython.llPythonIP))
-				// 		.withSize(3, 2)
-				// 		.withPosition(7, 3)
-				// 		.withWidget(BuiltInWidgets.kCameraStream)
-				// 		.withProperties(Map.of("Show Crosshair", false, "Show Controls", false));
+				// Constants.Vision.LimelightPython.llPythonIP))
+				// .withSize(3, 2)
+				// .withPosition(7, 3)
+				// .withWidget(BuiltInWidgets.kCameraStream)
+				// .withProperties(Map.of("Show Crosshair", false, "Show Controls", false));
 			}
 
 			testConfigured = true;

@@ -38,6 +38,12 @@ public final class Constants {
 		public static final Vector<N3> kPrecisionInMyVision = VecBuilder.fill(0.29, 0.29, Units.degreesToRadians(100));
 
 //
+		public static class LimelightPlay{
+			public static final String llPlay = "limelight-play";
+			public static final String llPlayIP = "http://10.5.48.14:5800/stream.mjpg";
+			public static final int llPythonPipelineIndex = 0;
+
+		}
 		public static class LimelightFront {
 			public static final String llAprilTag = "limelight-front";
 			public static final String llAprilTagIP = "http://10.5.48.13:5800/stream.mjpg";
